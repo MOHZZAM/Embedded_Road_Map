@@ -1,0 +1,9 @@
+07:44:46 **** Clean-only build of configuration Debug for project 001_LED ****
+make -j12 clean 
+rm -rf ./Startup/startup_stm32f207zgtx.d ./Startup/startup_stm32f207zgtx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf 001_LED.elf 001_LED.list 001_LED.map default.size.stdout
+ 
+
+07:44:48 Build Finished. 0 errors, 0 warnings. (took 2s.7ms)
+

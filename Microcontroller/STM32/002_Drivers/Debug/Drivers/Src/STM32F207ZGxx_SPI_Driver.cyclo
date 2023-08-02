@@ -1,0 +1,12 @@
+STM32F207ZGxx_SPI_Driver.c:23:6:SPI_PeriClkCntrl	8
+STM32F207ZGxx_SPI_Driver.c:72:6:SPI_Init	4
+STM32F207ZGxx_SPI_Driver.c:131:6:SPI_DeInit	4
+STM32F207ZGxx_SPI_Driver.c:147:9:SPI_GetFlagStatus	2
+STM32F207ZGxx_SPI_Driver.c:169:6:SPI_SendData	4
+STM32F207ZGxx_SPI_Driver.c:210:6:SPI_ReceiveData	4
+STM32F207ZGxx_SPI_Driver.c:249:6:SPI_PeripheralControl	2
+STM32F207ZGxx_SPI_Driver.c:274:6:SPI_SSIConfig	2
+STM32F207ZGxx_SPI_Driver.c:299:6:SPI_SSOEConfig	2
+STM32F207ZGxx_SPI_Driver.c:323:6:SPI_InterruptConfig	1
+STM32F207ZGxx_SPI_Driver.c:339:6:SPI_PriorityConfig	1
+STM32F207ZGxx_SPI_Driver.c:356:6:SPI_IRQHandling	1

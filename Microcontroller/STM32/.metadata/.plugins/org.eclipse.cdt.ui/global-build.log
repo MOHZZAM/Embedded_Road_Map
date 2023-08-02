@@ -1,0 +1,26 @@
+02:46:55 **** Clean-only build of configuration Debug for project 002_Drivers ****
+make -j12 clean 
+rm -rf ./Startup/startup_stm32f207zgtx.d ./Startup/startup_stm32f207zgtx.o
+rm -rf ./Src/003_spi_tx_test.cyclo ./Src/003_spi_tx_test.d ./Src/003_spi_tx_test.o ./Src/003_spi_tx_test.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf ./Drivers/Src/STM32F207ZGxx_Gpio_Driver.cyclo ./Drivers/Src/STM32F207ZGxx_Gpio_Driver.d ./Drivers/Src/STM32F207ZGxx_Gpio_Driver.o ./Drivers/Src/STM32F207ZGxx_Gpio_Driver.su ./Drivers/Src/STM32F207ZGxx_SPI_Driver.cyclo ./Drivers/Src/STM32F207ZGxx_SPI_Driver.d ./Drivers/Src/STM32F207ZGxx_SPI_Driver.o ./Drivers/Src/STM32F207ZGxx_SPI_Driver.su
+rm -rf 002_Drivers.elf 002_Drivers.list 002_Drivers.map default.size.stdout
+ 
+02:46:56 **** Build of configuration Debug for project 002_Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f207zgtx.d" -MT"Startup/startup_stm32f207zgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f207zgtx.o" "../Startup/startup_stm32f207zgtx.s"
+arm-none-eabi-gcc "../Src/003_spi_tx_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F2 -DSTM32F207ZGTx -c -I../Inc -I"D:/MD/Learning/Learning/STM32/002_Drivers/Drivers/Src" -I"D:/MD/Learning/Learning/STM32/002_Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/003_spi_tx_test.d" -MT"Src/003_spi_tx_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/003_spi_tx_test.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F2 -DSTM32F207ZGTx -c -I../Inc -I"D:/MD/Learning/Learning/STM32/002_Drivers/Drivers/Src" -I"D:/MD/Learning/Learning/STM32/002_Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F2 -DSTM32F207ZGTx -c -I../Inc -I"D:/MD/Learning/Learning/STM32/002_Drivers/Drivers/Src" -I"D:/MD/Learning/Learning/STM32/002_Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Drivers/Src/STM32F207ZGxx_Gpio_Driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F2 -DSTM32F207ZGTx -c -I../Inc -I"D:/MD/Learning/Learning/STM32/002_Drivers/Drivers/Src" -I"D:/MD/Learning/Learning/STM32/002_Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/STM32F207ZGxx_Gpio_Driver.d" -MT"Drivers/Src/STM32F207ZGxx_Gpio_Driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/Src/STM32F207ZGxx_Gpio_Driver.o"
+arm-none-eabi-gcc "../Drivers/Src/STM32F207ZGxx_SPI_Driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F2 -DSTM32F207ZGTx -c -I../Inc -I"D:/MD/Learning/Learning/STM32/002_Drivers/Drivers/Src" -I"D:/MD/Learning/Learning/STM32/002_Drivers/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/STM32F207ZGxx_SPI_Driver.d" -MT"Drivers/Src/STM32F207ZGxx_SPI_Driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/Src/STM32F207ZGxx_SPI_Driver.o"
+arm-none-eabi-gcc -o "002_Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\MD\Learning\Learning\STM32\002_Drivers\STM32F207ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002_Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 002_Drivers.elf
+ 
+arm-none-eabi-size   002_Drivers.elf 
+arm-none-eabi-objdump -h -S  002_Drivers.elf  > "002_Drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2936	      8	   1568	   4512	   11a0	002_Drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: 002_Drivers.list
+ 

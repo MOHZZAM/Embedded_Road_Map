@@ -1,0 +1,6 @@
+"./Drivers/Src/STM32F207ZGxx_Gpio_Driver.o"
+"./Drivers/Src/STM32F207ZGxx_SPI_Driver.o"
+"./Src/003_spi_tx_test.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Startup/startup_stm32f207zgtx.o"
